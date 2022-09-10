@@ -11,5 +11,8 @@
   "dependencies": {
     "ascii-art": "^2.8.5",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16"
   }
 }
