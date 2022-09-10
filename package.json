@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ascii-art": "^2.8.5",
+    "colo": "^1.0.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
