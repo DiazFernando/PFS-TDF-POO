@@ -38,4 +38,4 @@ var miRadio = new Radio("Sony", 10, 88.5);
 miRadio.encenderApagar();
 miRadio.subirVolumen();
 miRadio.subirDial();
-miRadio.encenderApagar();
+
