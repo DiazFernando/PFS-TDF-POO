@@ -7,10 +7,14 @@ var Radio = /** @class */ (function () {
         this.encendidoApagado = false;
     }
     Radio.prototype.encenderApagar = function () {
-        if (this.encendidoApagado)
+        if (this.encendidoApagado) {
             this.encendidoApagado = false;
-        else
+            console.log(this.encendidoApagado);
+        }
+        else {
             this.encendidoApagado = true;
+            console.log(this.encendidoApagado);
+        }
     };
     Radio.prototype.subirVolumen = function () {
         this.volumenActual = this.volumenActual + 1;
@@ -34,3 +38,4 @@ var miRadio = new Radio("Sony", 10, 88.5);
 miRadio.encenderApagar();
 miRadio.subirVolumen();
 miRadio.subirDial();
+miRadio.encenderApagar();

@@ -17,10 +17,13 @@ class Radio{
     }
 
     encenderApagar(){
-        if (this.encendidoApagado)
-            this.encendidoApagado=false;
-        else
-        this.encendidoApagado=true;
+        if (this.encendidoApagado){
+            this.encendidoApagado=false
+            console.log(this.encendidoApagado)
+        } else {
+            this.encendidoApagado=true
+            console.log(this.encendidoApagado)
+        }
 
     }
 
