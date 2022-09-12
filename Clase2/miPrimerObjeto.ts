@@ -13,6 +13,7 @@ class Radio{
         this.marca = marca;
         this.volumenActual = volumen;
         this.dialActual = dial;
+        this.encendidoApagado = false;
     }
 
     encenderApagar(){
@@ -20,16 +21,17 @@ class Radio{
             this.encendidoApagado=false;
         else
         this.encendidoApagado=true;
+
     }
 
     subirVolumen(){
         this.volumenActual = this.volumenActual + 1;
-        console.log(this.dialActual)
+        console.log(this.volumenActual)
     }
 
     bajarVolumen(){
         this.volumenActual = this.volumenActual - 1;
-        console.log(this.dialActual)
+        console.log(this.volumenActual)
     }
 
     subirDial(){
@@ -44,7 +46,7 @@ class Radio{
 
 }
 
-let radio = new Radio("Sony",10,88.5);
-radio.encenderApagar();
-radio.subirVolumen();
-radio.subirDial();
+let miRadio = new Radio("Sony",10,88.5);
+miRadio.encenderApagar();
+miRadio.subirVolumen();
+miRadio.subirDial();
