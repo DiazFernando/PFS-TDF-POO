@@ -1,10 +1,11 @@
 var Radio = /** @class */ (function () {
     //funcionalidades
-    function Radio(marca, volumen, dial) {
+    function Radio(marca, volumen, dial, modelo) {
         this.marca = marca;
         this.volumenActual = volumen;
         this.dialActual = dial;
         this.encendidoApagado = false;
+        this.modelo = modelo;
     }
     Radio.prototype.encenderApagar = function () {
         if (this.encendidoApagado) {
@@ -34,8 +35,7 @@ var Radio = /** @class */ (function () {
     };
     return Radio;
 }());
-var miRadio = new Radio("Sony", 10, 88.5);
+var miRadio = new Radio("Sony", 10, 88.5, "vx-20");
 miRadio.encenderApagar();
 miRadio.subirVolumen();
 miRadio.subirDial();
-

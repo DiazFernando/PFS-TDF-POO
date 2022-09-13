@@ -9,11 +9,12 @@ class Radio{
 
     //funcionalidades
 
-    constructor(marca:string,volumen:number,dial:number){
+    constructor(marca:string,volumen:number,dial:number,modelo:string){
         this.marca = marca;
         this.volumenActual = volumen;
         this.dialActual = dial;
         this.encendidoApagado = false;
+        this.modelo = modelo
     }
 
     encenderApagar(){
@@ -49,7 +50,7 @@ class Radio{
 
 }
 
-let miRadio = new Radio("Sony",10,88.5);
+let miRadio = new Radio("Sony",10,88.5,"vx-20");
 miRadio.encenderApagar();
 miRadio.subirVolumen();
 miRadio.subirDial();
