@@ -27,7 +27,7 @@ var Electrodomestico = /** @class */ (function () {
         this.color = color;
     };
     Electrodomestico.prototype.getConsumo = function () {
-        return this.precioBase;
+        return this.consumoEnergetico;
     };
     Electrodomestico.prototype.setConsumo = function (consumo) {
         this.consumoEnergetico = consumo;
@@ -39,20 +39,22 @@ var Electrodomestico = /** @class */ (function () {
         this.peso = peso;
     };
     Electrodomestico.prototype.comprobarConsumo = function () {
-        if (this.consumoEnergetico <= 15)
-            return true;
-        else
-            return false;
+        var respuesta = false;
+        if (this.consumoEnergetico <= 15) {
+            respuesta = true;
+        }
+        return respuesta;
     };
     Electrodomestico.prototype.calcularBalance = function () {
         var resultado = Number(this.precioBase) / Number(this.peso);
         return resultado;
     };
     Electrodomestico.prototype.gamaDelProducto = function () {
-        if (this.calcularBalance() >= 3)
-            return "Alta";
-        else
-            return "Baja";
+        var gamaProducto = "Gama Baja";
+        if (this.calcularBalance() >= 3) {
+            gamaProducto = "Gama Alta";
+        }
+        return gamaProducto;
     };
     return Electrodomestico;
 }());

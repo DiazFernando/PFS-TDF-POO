@@ -23,7 +23,7 @@ class Electrodomestico {
     //Funcionalidades
 
     public getNombre():string{
-        return this.nombre
+        return this.nombre;
     }
 
     public setNombre(nombre:string):void{
@@ -31,7 +31,7 @@ class Electrodomestico {
     }
     
     public getPrecioBase():number{
-        return this.precioBase
+        return this.precioBase;
     }
 
     public setPrecioBase(precio:number):void{
@@ -40,7 +40,7 @@ class Electrodomestico {
     }
 
     public getColor():string{
-        return this.color
+        return this.color;
     }
 
     public setColor(color:string):void{
@@ -48,7 +48,7 @@ class Electrodomestico {
     }
 
     public getConsumo():number{
-        return this.precioBase
+        return this.consumoEnergetico;
     }
 
     public setConsumo(consumo:number):void{
@@ -57,7 +57,7 @@ class Electrodomestico {
     }
 
     public getPeso():number{
-        return this.peso
+        return this.peso;
     }
 
     public setPeso(peso:number):void{
@@ -66,10 +66,13 @@ class Electrodomestico {
     }
 
     public comprobarConsumo():boolean{
-        if(this.consumoEnergetico <= 15)
-        return true;
-        else
-        return false;
+        
+        let respuesta : boolean = false;
+
+        if(this.consumoEnergetico <= 15){
+            respuesta = true;  
+        }
+        return respuesta;
     }
 
     public calcularBalance():number{
@@ -79,11 +82,11 @@ class Electrodomestico {
 
     public gamaDelProducto():string{
         
-
-        if(this.calcularBalance()>= 3)
-        return "Alta";
-        else 
-        return "Baja"
+        let gamaProducto = "Gama Baja";
+        if(this.calcularBalance()>= 3){
+            gamaProducto = "Gama Alta";
+        }
+        return gamaProducto;
             
     }
         
