@@ -100,3 +100,6 @@ console.log(miElectrodomestico.getColor());
 console.log(miElectrodomestico.comprobarConsumo());
 console.log(miElectrodomestico.calcularBalance());
 console.log(miElectrodomestico.gamaDelProducto());
+miElectrodomestico.setColor("Azul");
+console.log(miElectrodomestico.getColor());
+console.log(miElectrodomestico.getNombre());
