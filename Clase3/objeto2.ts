@@ -83,6 +83,7 @@ class Electrodomestico {
     public gamaDelProducto():string{
         
         let gamaProducto = "Gama Baja";
+        
         if(this.calcularBalance()>= 3){
             gamaProducto = "Gama Alta";
         }
