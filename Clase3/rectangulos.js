@@ -18,7 +18,7 @@ var Rectangulo = /** @class */ (function () {
         var areaDelRectangulo = Number(this.base * this.altura);
         return areaDelRectangulo;
     };
-    Rectangulo.prototype.compararRectangulos = function (rectangulo1, rectangulo2) {
+    Rectangulo.prototype.getcompararRectangulos = function (rectangulo1, rectangulo2) {
         var resultado = 0;
         if (rectangulo1 > rectangulo2) {
             resultado = 1;
@@ -28,17 +28,37 @@ var Rectangulo = /** @class */ (function () {
         }
         return resultado;
     };
+    Rectangulo.prototype.getDeterminarSiEsCuadrado = function () {
+        var respuesta = "Es un cuadrado";
+        if (this.base != this.altura) {
+            respuesta = "No es un cuadrado";
+        }
+        return respuesta;
+    };
+    Rectangulo.prototype.getDeterminarSuPosicion = function () {
+        var respuesta = "Esta parado";
+        if (this.base > this.altura) {
+            respuesta = "Esta acostado";
+        }
+        return respuesta;
+    };
     return Rectangulo;
 }());
 var primerRectangulo = new Rectangulo(2, 4);
-var segundoRectangulo = new Rectangulo(3, 6);
+var segundoRectangulo = new Rectangulo(6, 3);
+// cree un cuadrado solo para verificar los resultados
 var cuadrado = new Rectangulo(2, 2);
 var areaRectangulo1 = primerRectangulo.getAreaDelRectangulo();
 var areaRectangulo2 = segundoRectangulo.getAreaDelRectangulo();
 console.log(primerRectangulo.getAreaDelRectangulo());
 console.log(segundoRectangulo.getAreaDelRectangulo());
 console.log(cuadrado.getAreaDelRectangulo());
-var comparacion = primerRectangulo.compararRectangulos(areaRectangulo1, areaRectangulo2);
+var comparacion = primerRectangulo.getcompararRectangulos(areaRectangulo1, areaRectangulo2);
 console.log(comparacion);
-var comparacion2 = primerRectangulo.compararRectangulos(areaRectangulo1, areaRectangulo1);
+var comparacion2 = primerRectangulo.getcompararRectangulos(areaRectangulo1, areaRectangulo1);
 console.log(comparacion2);
+console.log(primerRectangulo.getDeterminarSiEsCuadrado());
+console.log(segundoRectangulo.getDeterminarSiEsCuadrado());
+console.log(cuadrado.getDeterminarSiEsCuadrado());
+console.log(primerRectangulo.getDeterminarSuPosicion());
+console.log(segundoRectangulo.getDeterminarSuPosicion());
