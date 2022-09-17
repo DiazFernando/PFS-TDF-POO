@@ -1,11 +1,12 @@
 class Radio{
     //atriutos o estados
 
-    marca:string;
-    modelo:string;
-    encendidoApagado:boolean;
-    volumenActual:number;
-    dialActual:number;
+    private marca:string;
+    private modelo:string;
+    private encendidoApagado:boolean;
+    private volumenActual:number;
+    private dialActual:number;
+    private standby:string;
 
     //funcionalidades
 
@@ -14,7 +15,29 @@ class Radio{
         this.volumenActual = volumen;
         this.dialActual = dial;
         this.encendidoApagado = false;
-        this.modelo = modelo
+        this.modelo = modelo;
+        this.standby = "APAGADO";
+    }
+
+    
+    public getMarca():string {
+        return this.marca;
+    }
+
+    public setMarca(nuevaMarca:string) {
+        this.marca = nuevaMarca;
+    }
+
+    public getModelo():string {
+        return this.modelo;
+    }
+
+    public setModelo(nuevoModelo:string) {
+        this.modelo = nuevoModelo;
+    }
+    
+    getStandby():string{
+        return this.standby;
     }
 
     encenderApagar(){
@@ -26,6 +49,10 @@ class Radio{
             console.log(this.encendidoApagado)
         }
 
+    }
+
+    getVolumen():number{
+        return this.volumenActual
     }
 
     subirVolumen(){
