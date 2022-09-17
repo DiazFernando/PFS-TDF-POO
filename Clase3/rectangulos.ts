@@ -45,7 +45,7 @@ class Rectangulo {
 
     }
 
-    public getDeterminarSiEsCuadrado():string{
+    public DeterminarSiEsCuadrado():string{
         let respuesta:string = "Es un cuadrado";
         if (this.base != this.altura){
             respuesta = "No es un cuadrado";
@@ -53,7 +53,7 @@ class Rectangulo {
         return respuesta;
     }
 
-    public getDeterminarSuPosicion():string{
+    public DeterminarSuPosicion():string{
         let respuesta:string = "Esta parado";
         if(this.base > this.altura){
             respuesta = "Esta acostado"
