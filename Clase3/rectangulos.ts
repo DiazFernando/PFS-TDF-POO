@@ -81,10 +81,9 @@ console.log(comparacion);
 let comparacion2:number = primerRectangulo.getcompararRectangulos(areaRectangulo1,areaRectangulo1);
 console.log(comparacion2);
 
-console.log(primerRectangulo.getDeterminarSiEsCuadrado());
-console.log(segundoRectangulo.getDeterminarSiEsCuadrado());
-console.log(cuadrado.getDeterminarSiEsCuadrado());
+console.log(primerRectangulo.DeterminarSiEsCuadrado());
+console.log(segundoRectangulo.DeterminarSiEsCuadrado());
+console.log(cuadrado.DeterminarSiEsCuadrado());
 
-console.log(primerRectangulo.getDeterminarSuPosicion());
-console.log(segundoRectangulo.getDeterminarSuPosicion());
-
+console.log(primerRectangulo.DeterminarSuPosicion());
+console.log(segundoRectangulo.DeterminarSuPosicion());

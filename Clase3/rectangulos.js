@@ -28,14 +28,14 @@ var Rectangulo = /** @class */ (function () {
         }
         return resultado;
     };
-    Rectangulo.prototype.getDeterminarSiEsCuadrado = function () {
+    Rectangulo.prototype.DeterminarSiEsCuadrado = function () {
         var respuesta = "Es un cuadrado";
         if (this.base != this.altura) {
             respuesta = "No es un cuadrado";
         }
         return respuesta;
     };
-    Rectangulo.prototype.getDeterminarSuPosicion = function () {
+    Rectangulo.prototype.DeterminarSuPosicion = function () {
         var respuesta = "Esta parado";
         if (this.base > this.altura) {
             respuesta = "Esta acostado";
@@ -57,8 +57,8 @@ var comparacion = primerRectangulo.getcompararRectangulos(areaRectangulo1, areaR
 console.log(comparacion);
 var comparacion2 = primerRectangulo.getcompararRectangulos(areaRectangulo1, areaRectangulo1);
 console.log(comparacion2);
-console.log(primerRectangulo.getDeterminarSiEsCuadrado());
-console.log(segundoRectangulo.getDeterminarSiEsCuadrado());
-console.log(cuadrado.getDeterminarSiEsCuadrado());
-console.log(primerRectangulo.getDeterminarSuPosicion());
-console.log(segundoRectangulo.getDeterminarSuPosicion());
+console.log(primerRectangulo.DeterminarSiEsCuadrado());
+console.log(segundoRectangulo.DeterminarSiEsCuadrado());
+console.log(cuadrado.DeterminarSiEsCuadrado());
+console.log(primerRectangulo.DeterminarSuPosicion());
+console.log(segundoRectangulo.DeterminarSuPosicion());
