@@ -7,6 +7,7 @@ class Radio{
     private volumenActual:number;
     private dialActual:number;
     private standby:string;
+ 
 
     //funcionalidades
 
@@ -17,6 +18,7 @@ class Radio{
         this.encendidoApagado = false;
         this.modelo = modelo;
         this.standby = "APAGADO";
+ 
     }
 
     
@@ -36,48 +38,65 @@ class Radio{
         this.modelo = nuevoModelo;
     }
     
-    getStandby():string{
+    public getStandby():string{
         return this.standby;
     }
 
-    encenderApagar(){
+    public encenderApagar(){
+       
         if (this.encendidoApagado){
-            this.encendidoApagado=false
-            console.log(this.encendidoApagado)
+            this.standby = "APAGADO";
         } else {
-            this.encendidoApagado=true
-            console.log(this.encendidoApagado)
+            this.encendidoApagado=true;
+            this.standby = "ENCENDIDO";
         }
 
     }
 
-    getVolumen():number{
-        return this.volumenActual
+    public getVolumen():number{
+        return this.volumenActual;
     }
 
-    subirVolumen(){
+    public subirVolumen(){
         this.volumenActual = this.volumenActual + 1;
-        console.log(this.volumenActual)
     }
 
-    bajarVolumen(){
+    public bajarVolumen(){
         this.volumenActual = this.volumenActual - 1;
-        console.log(this.volumenActual)
     }
 
-    subirDial(){
-        this.dialActual = this.dialActual + 0.5;
-        console.log(this.dialActual)
+    public getDial():number{
+        return this.dialActual;
     }
 
-    bajarDial(){
+    public subirDial(){
         this.dialActual = this.dialActual + 0.5;
-        console.log(this.dialActual)
+    }
+
+    public bajarDial(){
+        this.dialActual = this.dialActual + 0.5;
+    }
+
+    public toString():string{
+        let respuesta:string = this.getMarca() + " / " + this.getModelo() + " / ";
+        return respuesta;
     }
 
 }
 
 let miRadio = new Radio("Sony",10,88.5,"vx-20");
+//consulto el standby de mi radio por defaul viene apagado
+console.log(miRadio.getStandby());
+//Enciendo mi radio
 miRadio.encenderApagar();
+//consulto nuevamente el standby deberia haber encendido
+console.log(miRadio.getStandby());
+//consulto el volumen por parametro es 10
+console.log(miRadio.getVolumen());
+//subo +2 de volumen
 miRadio.subirVolumen();
-miRadio.subirDial();
+miRadio.subirVolumen();
+//consulto el volumen deberia dar 12
+console.log(miRadio.getVolumen());
+// consulto los datos de mi radio
+console.log(miRadio.toString());
