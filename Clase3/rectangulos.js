@@ -14,11 +14,11 @@ var Rectangulo = /** @class */ (function () {
         this.altura = altura;
     }
     // Funcionalidades
-    Rectangulo.prototype.getAreaDelRectangulo = function () {
-        var areaDelRectangulo = Number(this.base * this.altura);
+    Rectangulo.prototype.areaDelRectangulo = function () {
+        var areaDelRectangulo = this.base * this.altura;
         return areaDelRectangulo;
     };
-    Rectangulo.prototype.getcompararRectangulos = function (rectangulo1, rectangulo2) {
+    Rectangulo.prototype.compararRectangulos = function (rectangulo1, rectangulo2) {
         var resultado = 0;
         if (rectangulo1 > rectangulo2) {
             resultado = 1;
@@ -48,14 +48,14 @@ var primerRectangulo = new Rectangulo(2, 4);
 var segundoRectangulo = new Rectangulo(6, 3);
 // cree un cuadrado solo para verificar los resultados
 var cuadrado = new Rectangulo(2, 2);
-var areaRectangulo1 = primerRectangulo.getAreaDelRectangulo();
-var areaRectangulo2 = segundoRectangulo.getAreaDelRectangulo();
-console.log(primerRectangulo.getAreaDelRectangulo());
-console.log(segundoRectangulo.getAreaDelRectangulo());
-console.log(cuadrado.getAreaDelRectangulo());
-var comparacion = primerRectangulo.getcompararRectangulos(areaRectangulo1, areaRectangulo2);
+var areaRectangulo1 = primerRectangulo.areaDelRectangulo();
+var areaRectangulo2 = segundoRectangulo.areaDelRectangulo();
+console.log(primerRectangulo.areaDelRectangulo());
+console.log(segundoRectangulo.areaDelRectangulo());
+console.log(cuadrado.areaDelRectangulo());
+var comparacion = primerRectangulo.compararRectangulos(areaRectangulo1, areaRectangulo2);
 console.log(comparacion);
-var comparacion2 = primerRectangulo.getcompararRectangulos(areaRectangulo1, areaRectangulo1);
+var comparacion2 = primerRectangulo.compararRectangulos(areaRectangulo1, areaRectangulo1);
 console.log(comparacion2);
 console.log(primerRectangulo.DeterminarSiEsCuadrado());
 console.log(segundoRectangulo.DeterminarSiEsCuadrado());
