@@ -51,10 +51,3 @@ class Auto{
         this.anio= nuevoAnio;
     }
 }
-
-let auto1 = new Auto("Fiat","Uno","AA123AA",2020);
-
-console.log(auto1.getMarca());
-console.log(auto1.getModelo());
-console.log(auto1.getPatente());
-console.log(auto1.getAnio());
