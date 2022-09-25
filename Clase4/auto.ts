@@ -1,4 +1,4 @@
-class Auto{
+export class Auto{
 
     // Estados o Atributos    
 
@@ -49,5 +49,8 @@ class Auto{
 
     setAnio(nuevoAnio:number):void{
         this.anio= nuevoAnio;
+    }
+    tostring():string{
+        return this.getMarca() + " - " +this.getModelo() + " - " + this.getPatente() + " - " + this.getAnio();
     }
 }

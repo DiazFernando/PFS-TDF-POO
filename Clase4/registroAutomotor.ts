@@ -1,4 +1,6 @@
-class RegistroAutomotor{
+import { Auto } from "./auto";
+
+export class RegistroAutomotor{
     private listadoDeAutos: Auto[];
     
 
@@ -6,12 +8,18 @@ class RegistroAutomotor{
         this.listadoDeAutos = listaDeAutos;
     }
 
-    consultarAuto(autoAConsultar:Auto):boolean{
-        let respuesta:boolean = false;
+    mostrarListaCompleta(){
+
+        this.listadoDeAutos.forEach(object =>{
+            console.log(object);
+        });
+    }
+    consultarAuto(autoAConsultar:Auto):string{
+        let respuesta:string = " No esta Registado";
 
         for(let i : number = 0; i < this.listadoDeAutos.length; i++){
             if(this.listadoDeAutos[i].getPatente() === autoAConsultar.getPatente()){
-                respuesta = true;
+                respuesta = "El Auto esta registrado: " + this.listadoDeAutos[i].tostring();
             }
         }
         return respuesta;
@@ -42,11 +50,3 @@ class RegistroAutomotor{
 
 
 }
-
-let auto1:Auto = new Auto ("Volkswagen","Gol","AA111AA",2020);
-let auto2:Auto = new Auto ("Fiat","Cronos","BB222BB",2022);
-let auto3:Auto = new Auto ("Chevrolet","ASTRA","CC333CC",2019);
-
-let arregloDeAutos:Auto[] = [auto1,auto2,auto3];
-
-let registroAutomotorAustral:RegistroAutomotor = new RegistroAutomotor(arregloDeAutos);

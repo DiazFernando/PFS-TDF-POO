@@ -1,3 +1,6 @@
+"use strict";
+exports.__esModule = true;
+exports.Auto = void 0;
 var Auto = /** @class */ (function () {
     // Constructor
     function Auto(marcaAuto, modeloAuto, patenteAuto, anioAuto) {
@@ -31,10 +34,9 @@ var Auto = /** @class */ (function () {
     Auto.prototype.setAnio = function (nuevoAnio) {
         this.anio = nuevoAnio;
     };
+    Auto.prototype.tostring = function () {
+        return this.getMarca() + " - " + this.getModelo() + " - " + this.getPatente() + " - " + this.getAnio();
+    };
     return Auto;
 }());
-var auto1 = new Auto("Fiat", "Uno", "AA123AA", 2020);
-console.log(auto1.getMarca());
-console.log(auto1.getModelo());
-console.log(auto1.getPatente());
-console.log(auto1.getAnio());
+exports.Auto = Auto;
