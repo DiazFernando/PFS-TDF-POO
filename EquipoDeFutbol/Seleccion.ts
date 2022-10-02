@@ -4,9 +4,9 @@ import { Jugador } from "./Jugador";
 export class Seleccion{
     //Atributos
 
-    listaDeJugadores = new Array<Jugador>;
-    listaCuerpoTecnico = new Array<CuerpoTecnico>;
-    nombre:string;
+    private listaDeJugadores = new Array<Jugador>;
+    private listaCuerpoTecnico = new Array<CuerpoTecnico>;
+    private nombre:string;
 
     //Constructor
 
