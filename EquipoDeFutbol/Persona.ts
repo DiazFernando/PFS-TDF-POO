@@ -5,7 +5,7 @@ export class Persona{
     private nombre:string;
     private apellido:string;
     private numDePasaporte:number;
-    private fechaDeNacimiento: string;
+    private fechaDeNacimiento: Date;
 
     //Constructor
 
@@ -14,7 +14,7 @@ export class Persona{
         this.nombre = nombre;
         this.apellido = apellido;
         this.numDePasaporte = numPasaporte;
-        this.fechaDeNacimiento = fechaDeNacimiento;
+        this.fechaDeNacimiento = new Date(fechaDeNacimiento);
         
         
     }
@@ -33,7 +33,7 @@ export class Persona{
         return this.numDePasaporte
     }
 
-    getFechaDeNacimiento():string{
+    getFechaDeNacimiento():Date{
         return this.fechaDeNacimiento;
     }
 
