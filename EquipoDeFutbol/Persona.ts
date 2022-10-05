@@ -2,10 +2,10 @@ export class Persona{
     
     //Atributos
 
-    private nombre:string;
-    private apellido:string;
-    private numDePasaporte:number;
-    private fechaDeNacimiento: Date;
+    protected nombre:string;
+    protected apellido:string;
+    protected numDePasaporte:number;
+    protected fechaDeNacimiento: Date;
 
     //Constructor
 

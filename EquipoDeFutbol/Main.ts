@@ -66,3 +66,4 @@ console.log("-------------------------------------------------------------");
 
 console.log(seleccion.mostrarSeleccionCompleta());
 
+console.log(seleccion.mostrarJugador("LIONEL","MESSI"));
