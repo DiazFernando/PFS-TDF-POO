@@ -1,0 +1,17 @@
+"use strict";
+exports.__esModule = true;
+var CuentaAhorro_1 = require("./CuentaAhorro");
+var CuentaCorriente_1 = require("./CuentaCorriente");
+var cuenta1 = new CuentaAhorro_1.CuentaAhorro(1.2, 112233, 1000, "Fernando", "Diaz", 36605873);
+var cuenta2 = new CuentaCorriente_1.CuentaCorriente(113355, 1500, "Fernando", "Diaz", 36605873);
+console.log(cuenta1.getSaldo());
+cuenta1.retirar(300);
+console.log(cuenta1.getSaldo());
+cuenta1.actualizarSaldo();
+console.log(cuenta1.getSaldo());
+console.log("-------------------------------------------------------");
+console.log(cuenta2.getSaldo());
+cuenta2.retirar(300);
+console.log(cuenta2.getSaldo());
+cuenta2.actualizarSaldo();
+console.log(cuenta2.getSaldo());
