@@ -2,16 +2,16 @@ import { Cuenta } from "./Cuenta";
 
 export class CuentaCorriente extends Cuenta{
     protected interesFijo:number;
-    protected saldoMin:number;
+    
 
     constructor(numDeCuenta:number,saldoActual:number,nombreCliente:string,apellidoCliente:string,dniCliente:number){
         super(numDeCuenta,saldoActual,nombreCliente,apellidoCliente,dniCliente);
-        this.interesFijo = 1.5;
-        this.saldoMin = 0;
+        this.interesFijo = 1.015;
+        
     }
 
     toString():string{
-        return this.getNombre() + "\n" + this.getApellido()  + "\n" + String(this.getDni()) + "\n"  + "\n" + String(this.saldoMin) + "\n" + this.getSaldo();
+        return "Nombre Del Cliente: " + this.getNombre() + "\n" + "Apellido Del Cliente: " +  this.getApellido()  + "\n" + "DNI Del Cliente: " + String(this.getDni()) + "\n" + "Saldo Actual: " + this.getSaldo();
     }
 
     actualizarSaldo(): void {
@@ -19,11 +19,7 @@ export class CuentaCorriente extends Cuenta{
     }
 
     retirar(montoAretirar:number):void {
-        if(montoAretirar < this.saldo && montoAretirar > this.saldoMin){
-            this.saldo = this.saldo - montoAretirar;
-            console.log("Retiro " + montoAretirar);
-        }else{
-            console.log("Saldo Insuficiente");
-        }
-    }
+        this.saldo = this.saldo - montoAretirar;
+     }
+
  }

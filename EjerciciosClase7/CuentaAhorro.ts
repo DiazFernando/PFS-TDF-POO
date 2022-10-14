@@ -11,7 +11,7 @@ export class CuentaAhorro extends Cuenta{
     }
 
     toString():string{
-        return this.getNombre() + "\n" + this.getApellido()  + "\n" + String(this.getDni()) + "\n" + String(this.interesVariable) + "\n" + String(this.saldoMin) + "\n" + this.getSaldo();
+        return "Nombre Del Cliente: " + this.getNombre() + "\n" + "Apellido Del Cliente: " + this.getApellido()  + "\n" + "DNI Del Cliente: " + String(this.getDni()) + "\n" + "Interes Anual Variable: " + String(this.interesVariable) + "\n" + "Saldo Actual: " + this.getSaldo();
     }
 
     setInteres(nuevoInteres:number):void{
@@ -23,12 +23,12 @@ export class CuentaAhorro extends Cuenta{
     }
 
     retirar(montoAretirar:number):void {
-        if(montoAretirar < this.saldo && montoAretirar > this.saldoMin){
+        if(montoAretirar > this.saldo || this.saldo-montoAretirar < 0){
+            console.log("Saldo Insuficiente");
+        }else {
             this.saldo = this.saldo-montoAretirar;
             console.log("Retiro " + montoAretirar);
-        }else{
-            console.log("Saldo Insuficiente");
-        }
+         }
     }
 
 }

@@ -25,9 +25,6 @@ var Persona = /** @class */ (function () {
     Persona.prototype.setDni = function (nuevoDni) {
         this.dni = nuevoDni;
     };
-    Persona.prototype.toString = function () {
-        return this.getNombre() + "\n" + this.getApellido() + "\n" + String(this.getDni());
-    };
     return Persona;
 }());
 exports.Persona = Persona;

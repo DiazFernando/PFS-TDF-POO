@@ -21,24 +21,17 @@ var CuentaCorriente = /** @class */ (function (_super) {
     __extends(CuentaCorriente, _super);
     function CuentaCorriente(numDeCuenta, saldoActual, nombreCliente, apellidoCliente, dniCliente) {
         var _this = _super.call(this, numDeCuenta, saldoActual, nombreCliente, apellidoCliente, dniCliente) || this;
-        _this.interesFijo = 1.5;
-        _this.saldoMin = 0;
+        _this.interesFijo = 1.15;
         return _this;
     }
     CuentaCorriente.prototype.toString = function () {
-        return this.getNombre() + "\n" + this.getApellido() + "\n" + String(this.getDni()) + "\n" + "\n" + String(this.saldoMin) + "\n" + this.getSaldo();
+        return "Nombre Del Cliente: " + this.getNombre() + "\n" + "Apellido Del Cliente: " + this.getApellido() + "\n" + "DNI Del Cliente: " + String(this.getDni()) + "\n" + "Saldo Actual: " + this.getSaldo();
     };
     CuentaCorriente.prototype.actualizarSaldo = function () {
         this.saldo = this.saldo * this.interesFijo;
     };
     CuentaCorriente.prototype.retirar = function (montoAretirar) {
-        if (montoAretirar < this.saldo && montoAretirar > this.saldoMin) {
-            this.saldo = this.saldo - montoAretirar;
-            console.log("Retiro " + montoAretirar);
-        }
-        else {
-            console.log("Saldo Insuficiente");
-        }
+        this.saldo = this.saldo - montoAretirar;
     };
     return CuentaCorriente;
 }(Cuenta_1.Cuenta));

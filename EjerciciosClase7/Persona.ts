@@ -42,8 +42,4 @@ export class Persona{
         this.dni=nuevoDni;
     }
 
-    toString():string{
-        return this.getNombre() + "\n" + this.getApellido()  + "\n" + String(this.getDni());
-    }
-
 }

@@ -9,6 +9,7 @@ cuenta1.retirar(300);
 console.log(cuenta1.getSaldo());
 cuenta1.actualizarSaldo();
 console.log(cuenta1.getSaldo());
+console.log(cuenta1.toString());
 
 console.log("-------------------------------------------------------")
 
@@ -17,4 +18,5 @@ cuenta2.retirar(300);
 console.log(cuenta2.getSaldo());
 cuenta2.actualizarSaldo();
 console.log(cuenta2.getSaldo());
+console.log(cuenta2.toString());
 
