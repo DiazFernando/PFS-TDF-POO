@@ -1,7 +1,7 @@
 import { CuentaAhorro } from "./CuentaAhorro";
 import { CuentaCorriente } from "./CuentaCorriente";
 
-let cuenta1:CuentaAhorro = new CuentaAhorro(1.2,112233,1000,"Fernando","Diaz",36605873);
+let cuenta1:CuentaAhorro = new CuentaAhorro(1.012,112233,1000,"Fernando","Diaz",36605873);
 let cuenta2:CuentaCorriente = new CuentaCorriente(113355,1500,"Fernando","Diaz",36605873);
 
 console.log(cuenta1.getSaldo());
