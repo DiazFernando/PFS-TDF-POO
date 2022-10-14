@@ -35,12 +35,12 @@ var CuentaAhorro = /** @class */ (function (_super) {
         this.saldo = this.saldo * this.interesVariable;
     };
     CuentaAhorro.prototype.retirar = function (montoAretirar) {
-        if (montoAretirar > this.saldo || this.saldo - montoAretirar < 0) {
-            console.log("Saldo Insuficiente");
-        }
-        else {
+        if (montoAretirar <= this.saldo) {
             this.saldo = this.saldo - montoAretirar;
             console.log("Retiro " + montoAretirar);
+        }
+        else {
+            console.log("Saldo Insuficiente");
         }
     };
     return CuentaAhorro;

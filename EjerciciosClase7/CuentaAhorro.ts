@@ -23,11 +23,11 @@ export class CuentaAhorro extends Cuenta{
     }
 
     retirar(montoAretirar:number):void {
-        if(montoAretirar > this.saldo || this.saldo-montoAretirar < 0){
-            console.log("Saldo Insuficiente");
-        }else {
+        if(montoAretirar <= this.saldo){
             this.saldo = this.saldo-montoAretirar;
             console.log("Retiro " + montoAretirar);
+        }else {
+            console.log("Saldo Insuficiente");
          }
     }
 
