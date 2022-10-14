@@ -11,6 +11,9 @@ cuenta1.actualizarSaldo();
 console.log(cuenta1.getSaldo());
 console.log(cuenta1.toString());
 
+// Se retira  un monto elevado para coprobar que funcione la verificacion de saldo insuficiente
+cuenta1.retirar(2000);
+
 console.log("-------------------------------------------------------")
 
 console.log(cuenta2.getSaldo());

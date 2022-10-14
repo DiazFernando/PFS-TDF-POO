@@ -21,7 +21,7 @@ var CuentaCorriente = /** @class */ (function (_super) {
     __extends(CuentaCorriente, _super);
     function CuentaCorriente(numDeCuenta, saldoActual, nombreCliente, apellidoCliente, dniCliente) {
         var _this = _super.call(this, numDeCuenta, saldoActual, nombreCliente, apellidoCliente, dniCliente) || this;
-        _this.interesFijo = 1.15;
+        _this.interesFijo = 1.015;
         return _this;
     }
     CuentaCorriente.prototype.toString = function () {
