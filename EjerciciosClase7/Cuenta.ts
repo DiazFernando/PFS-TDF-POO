@@ -1,12 +1,11 @@
 import { Persona } from "./Persona";
 
-export abstract class Cuenta extends Persona{
+export abstract class Cuenta{
     protected numCuenta:number;
     protected saldo:number;
     protected cliente : Persona;
 
-    constructor (numeroDeCuenta:number,saldoActual:number,nombreCliente:string,apellidoCliente:string,dniCliente:number){
-        super(nombreCliente,apellidoCliente,dniCliente);
+    constructor (numeroDeCuenta:number,saldoActual:number,nombreCliente:string,apellidoCliente:string,dniCliente:number){    
         this.numCuenta = numeroDeCuenta;
         this.saldo = saldoActual;
         this.cliente = new Persona(nombreCliente,apellidoCliente,dniCliente);
