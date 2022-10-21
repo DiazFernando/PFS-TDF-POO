@@ -20,3 +20,6 @@ console.log(libreriaUshuaia.ConsultarPorElLibro(libro3));
 console.log("-----------------------------------------------------");
 //Por ultimo muestro la base de datos completa nuevamente
 libreriaUshuaia.mostrarBaseDeDatos();
+var texto = "Hola Mundo";
+libro1.crearArchivo("ejemplo1.txt", texto);
+libro1.leerArchivo("ejemplo1.txt");

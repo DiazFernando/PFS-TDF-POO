@@ -1,3 +1,5 @@
+var fs = require("fs");
+
 export class Libro{
     //estados o atributos
 
@@ -32,4 +34,33 @@ export class Libro{
     getAutorDelLibro():string{
         return this.autor;
     }
+
+    private manipularArchivo(nombre:string, texto:string){
+        fs.writeFile(nombre, texto , error => {
+            if(error)
+                console.log("ERROR");
+            else
+                console.log("Se creo el archivo");    
+        });
+
+    }
+
+    crearArchivo(nombre:string,texto){
+        this.manipularArchivo(nombre,texto);
+    }
+
+    modificarArchivo(nombre:string,texto){
+        this.manipularArchivo(nombre,texto);
+    }
+
+    leerArchivo(path:string){
+        fs.readFile(path,(error, texto)=>{
+            if(error)
+                console.log("ERROR");
+            else
+                console.log(texto.toString());
+        })
+    }
+
+
 }
